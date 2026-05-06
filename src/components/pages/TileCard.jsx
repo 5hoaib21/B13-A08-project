@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const TileCard = ({tile}) => {
-  console.log(tile);
+  // console.log(tile);
   return (
     <Card className='border border-zinc-200 rounded-2xl shadow-2xl hover:shadow'>
     <div className='relative w-full aspect-square'>
