@@ -8,12 +8,11 @@ const Footer = () => {
                 <div>
                   <Link href={'/'}>
                       <h2 className="text-3xl font-bold mb-4">
-                        TileCraft
+                        Tiles Gallery
                     </h2>
                   </Link>
                     <p className="text-gray-400">
-                        Premium ceramic, marble, and designer tiles for modern homes.
-                        Build your dream space with TileCraft quality.
+                      Transform your space with Tiles Gallery’s premium ceramic, marble, and designer tiles—where quality meets modern design.
                     </p>
                 </div>
                 <div>
@@ -33,10 +32,10 @@ const Footer = () => {
                         Contact Us
                     </h2>
                     <p className="text-gray-400 mb-2 hover:text-white cursor-pointer">
-                        Email: support@tilecraft.com
+                        Email: info@tilesgallery.com
                     </p>
                     <p className="text-gray-400 mb-4 hover:text-white cursor-pointer">
-                        Phone: +880 1700-000000
+                        Phone: +880 1608763821
                     </p>
                     <p className="text-gray-500 mb-3">
                         Follow us on social media
@@ -51,7 +50,7 @@ const Footer = () => {
             </div>
 
             <div className="text-center text-gray-500 border-t border-gray-700 py-4 mt-6">
-                © {new Date().getFullYear()} TileCraft. All Rights Reserved.
+                © {new Date().getFullYear()} Tiles Gallery. All Rights Reserved.
             </div>
         </footer>
     );
