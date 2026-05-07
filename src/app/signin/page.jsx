@@ -28,8 +28,8 @@ export default function SignInPage() {
 
     const { data: res, error } = await authClient.signIn.email({
       email,
-
       password,
+      callbackURL: '/'
     });
     // console.log({data, error});
     if (error) {

@@ -16,8 +16,10 @@ import { authClient } from "@/lib/auth-client";
 import toast, { Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
+  const router = useRouter()
 
   const [isShowPassword, setIsShowPassword] = useState(false)
 
@@ -43,6 +45,7 @@ export default function SignUpPage() {
 
     if (res) {
       toast.success("Registration Successful😊 Please Login with same info.");
+      router.push('/signin')
     
     }
   };
@@ -141,7 +144,7 @@ export default function SignUpPage() {
       </Form>
       <Toaster
   position="top-center"
-  reverseOrder={false}
+  reverseOrder={true}
 />
     </Card>
   );
