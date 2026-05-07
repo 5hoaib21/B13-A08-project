@@ -29,15 +29,14 @@ const ViewDetailsPage = async ({ params }) => {
             />
           </div>
           <div className="space-y-5">
-            <h2 className="text-2xl lg:text-4xl font-bold">
+         <div>
+             <h2 className="text-2xl lg:text-4xl font-semibold">
               Title :{" "}
-              <span className="font-semibold text-green-600">{tile.title}</span>
+              <span className="font-bold text-zinc-600">{tile.title}</span>
             </h2>
-            <p className="text-xl font-bold">
-              Description :{" "}
-              <span className="font-semibold">{tile.description}</span>
-            </p>
-           
+            <p className="text-xl font-semibold">{tile.description}</p>
+         </div>
+
             <p className="text-xl font-bold">
               Dimensions :{" "}
               <span className="font-semibold">{tile.dimensions}</span>
@@ -51,7 +50,7 @@ const ViewDetailsPage = async ({ params }) => {
                 ${tile.price} {tile.currency}
               </span>
             </p>
-             <p className="text-xl font-bold">
+            <p className="text-xl font-bold">
               Category : <span className="font-semibold">{tile.category}</span>
             </p>
             <p className="text-xl font-bold">
@@ -60,10 +59,12 @@ const ViewDetailsPage = async ({ params }) => {
             </p>
             <div className=" flex items-center  gap-5">
               <Link href={""}>
-                <Button className={"rounded"}><BiAddToQueue/> ADD To Cart</Button>
+                <Button variant="tertiary" className={"rounded"}>
+                  <BiAddToQueue /> ADD To Cart
+                </Button>
               </Link>
               <Link href={"/all-tiles"}>
-                <Button className={"rounded"}>
+                <Button variant="secondary" className={"rounded"}>
                   <FaArrowLeft />
                   Back
                 </Button>

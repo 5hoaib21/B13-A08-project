@@ -46,8 +46,8 @@ const Navbar = () => {
           </div> */}
 
           <div>
-            <Link href={"/login"}>
-              <Button className={"rounded"}>Log In</Button>
+            <Link href={"/signin"}>
+              <Button className={"rounded"}>Sign in</Button>
             </Link>
           </div>
         </div>
