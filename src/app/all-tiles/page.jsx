@@ -2,11 +2,9 @@ import TileCard from "@/components/pages/TileCard";
 
 
 const AllTilesPage = async () => {
-  const res = await fetch(
-    `https://tiles-gallery-server-xt5y.onrender.com/tiles`,
-  );
+  const res = await fetch(`https://tiles-gallery-server-xt5y.onrender.com/tiles`);
   const tiles = await res.json();
-  // console.log(tiles);
+
   return (
     <div className="w-11/12 mx-auto">
     <h1 className="text-4xl font-bold text-center my-5">All Tiles</h1>
