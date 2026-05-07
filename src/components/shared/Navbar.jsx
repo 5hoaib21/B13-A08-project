@@ -8,49 +8,51 @@ import NavLink from "./NavLink";
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="flex flex-col lg:flex-row justify-center space-y-5 lg:justify-between items-center shadow lg:px-14 py-4">
+    <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {" "}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />{" "}
+            </svg>
+          </div>
+          <ul
+            tabIndex="-1"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <NavLink href={"/"}>Home</NavLink>
+            <NavLink href={"/all-tiles"}>All Tiles</NavLink>
+            <NavLink href={"/profile"}>Profile</NavLink>
+            <NavLink href={"/signin"}>Sign in</NavLink>
+          </ul>
+        </div>
         <Link href={"/"}>
-          <h2 className="text-xl lg:text-2xl  font-bold">
-            Tiles Gallery
-          </h2>
+          <h1 className="text-xl lg:text-2xl  font-bold">Tiles Gallery</h1>
         </Link>
-        <div className="flex gap-8 font-semibold text-xl">
+      </div>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
           <NavLink href={"/"}>Home</NavLink>
           <NavLink href={"/all-tiles"}>All Tiles</NavLink>
-          <NavLink href={"/profile"}>My Profile</NavLink>
-        </div>
-        <div>
-        {/* spinner */}
-          {/* <div className="flex items-center gap-4">
-            <Spinner />
-          </div> */}
-
-          {/* <div className="flex gap-2 items-center justify-center">
-            <h2 className="whitespace-nowrap font-bold bg-linear-to-r from-blue-500 to-orange-600 bg-clip-text text-transparent">
-              Hi,{" "}
-            </h2>
-            <Image
-              src=""
-              width={400}
-              height={400}
-              alt="user-logo"
-              className="w-10 h-10 rounded-full"
-            />
-            <Button
-              className={"rounded"}
-              onClick={async () => await authClient.signOut()}
-            >
-              LogOut
-            </Button>
-          </div> */}
-
-          <div>
-            <Link href={"/signin"}>
-              <Button className={"rounded"}>Sign in</Button>
-            </Link>
-          </div>
-        </div>
+          <NavLink href={"/profile"}>Profile</NavLink>
+        </ul>
+      </div>
+      <div className="navbar-end">
+        <Link href={"/signin"}>
+          <Button className={"rounded hidden lg:flex"}>Sign in</Button>
+        </Link>
       </div>
     </div>
   );

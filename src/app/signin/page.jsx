@@ -19,6 +19,18 @@ import { useState } from "react";
 
 export default function SignInPage() {
   const [isShowPassword, setIsShowPassword] = useState(false);
+
+
+
+  // google sign in
+
+  const handleGoogleSignIn = async () => {
+await authClient.signIn.social({
+  provider: 'google'
+})
+  }
+
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -113,11 +125,15 @@ export default function SignInPage() {
         </p>
         <div className="divider">OR</div>
         <div className="space-y-3">
-          <Button className="w-full" variant="tertiary">
+          <Button 
+          className="w-full" 
+          variant="tertiary"
+          onClick={handleGoogleSignIn}
+          >
             <Icon icon="devicon:google" />
             Sign in with Google
           </Button>
-          <Button className="w-full" variant="tertiary">
+          <Button isDisabled className="w-full" variant="tertiary">
             <Icon icon="mdi:github" />
             Sign in with GitHub
           </Button>
