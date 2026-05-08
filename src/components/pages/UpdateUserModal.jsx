@@ -1,27 +1,26 @@
 "use client";
 
-
 import { authClient } from "@/lib/auth-client";
-import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
+import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import toast, { Toaster } from "react-hot-toast";
 import { BiEdit, BiUser } from "react-icons/bi";
 
 export function UpdateUserModal() {
   const onSubmit = async (e) => {
-    e.preventDefault()
-    const name = e.target.name.value
-    const image = e.target.image.value
- await authClient.updateUser({
-  name,
-  image,
- })
-    // console.log({name, image})
-
-
-
-  }
+    e.preventDefault();
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    await authClient.updateUser({
+      name,
+      image,
+    });
+toast.success('Updated')
+  };
   return (
-    <Modal>
-      <Button variant="secondary"><BiEdit /> Update Profile</Button>
+  <div>  <Modal>
+      <Button variant="secondary">
+        <BiEdit /> Update Profile
+      </Button>
       <Modal.Backdrop>
         <Modal.Container placement="auto">
           <Modal.Dialog className="sm:max-w-md">
@@ -31,13 +30,10 @@ export function UpdateUserModal() {
                 <BiUser className="size-5" />
               </Modal.Icon>
               <Modal.Heading>Update Your Profile</Modal.Heading>
-        
             </Modal.Header>
             <Modal.Body className="p-6">
               <Surface variant="default">
-                <form 
-                onSubmit={onSubmit}
-                className="flex flex-col gap-4">
+                <form onSubmit={onSubmit} className="flex flex-col gap-4">
                   <TextField className="w-full" name="name" type="text">
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
@@ -46,19 +42,25 @@ export function UpdateUserModal() {
                     <Label>Image URL</Label>
                     <Input placeholder="Image URL" />
                   </TextField>
-            <Modal.Footer>
-              <Button slot="close" variant="secondary">
-                Cancel
-              </Button>
-              <Button type="submit" slot="close">Update</Button>
-            </Modal.Footer>
+                  <Modal.Footer>
+                    <Button slot="close" variant="secondary">
+                      Cancel
+                    </Button>
+                    <Button type="submit" slot="close">
+                      Update
+                    </Button>
+                  </Modal.Footer>
                 </form>
               </Surface>
             </Modal.Body>
-            
           </Modal.Dialog>
         </Modal.Container>
       </Modal.Backdrop>
     </Modal>
+      <Toaster
+  position="top-center"
+  reverseOrder={true}
+/>
+    </div>
   );
 }
