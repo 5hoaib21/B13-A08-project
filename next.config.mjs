@@ -4,16 +4,13 @@ const nextConfig = {
 
   images: {
     remotePatterns: [
+     {
+        protocol: 'https',
+        hostname: '**', // Eita diye jekono HTTPS domain allow hobe
+      },
       {
-        hostname: 'i.ibb.co.com',
-      },
-       {
-   
-        hostname: "lh3.googleusercontent.com",
-      },
-       {
-   
-        hostname: "img.daisyui.com",
+        protocol: 'http',
+        hostname: '**', // Eita diye jekono HTTP domain allow hobe (optional)
       },
     ]
   }

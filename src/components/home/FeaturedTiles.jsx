@@ -13,7 +13,7 @@ const FeaturedTiles = async () => {
   return <div className="w-11/12 mx-auto">
     <div className="mt-9">
       <h1 className="text-2xl font-bold mt-5">Most Demandable</h1>
-      <div className="grid grid-cols-4 gap-2 mt-9">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 mt-9">
         {
           topTiles.map(tile => {
             
