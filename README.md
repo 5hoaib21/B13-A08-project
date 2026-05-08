@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏛️ Tiles Gallery
 
-## Getting Started
+A sophisticated and modern e-commerce platform dedicated to high-quality tiles. Users can explore a wide variety of tiles, checking their prices, quality, materials, and sizes to make informed decisions for their home or office.
 
-First, run the development server:
+## 🚀 Live Demo
+Check out the live project here: [https://b13-a08-project.vercel.app](https://b13-a08-project.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📸 Visuals
+![Animated Coding](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXZ6ZzRyeXZ6ZzRyeXZ6ZzRyeXZ6ZzRyeXZ6ZzRyeXZ6ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L1R1QHpHvAs8D_Jz9N/giphy.gif)
+*(Note: You can replace this with your own animated coding gif or project screenshot)*
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Purpose
+The main goal of **Tiles Gallery** is to bridge the gap between tile suppliers and customers. It provides a detailed catalog where every product is listed with comprehensive details including material specifications, dimensions, and quality grades, ensuring a premium shopping experience.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   **📱 Fully Responsive Design:** Optimized for a seamless experience across Mobile, Tablets, and Desktop monitors.
+-   **🔐 Robust Authentication:** Integrated **Email-Password** and **Google Social Login** for secure access.
+-   **👤 Profile Management:** Users can easily update their profile information, including their Display Name and Profile Picture URL.
+-   **💎 Detailed Product Insights:** Comprehensive information for each tile, covering pricing, material type, and exact sizing.
+-   **⚡ Modern UI/UX:** Built with high-performance components and smooth animations for a premium feel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Technologies & NPM Packages Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Core Technologies:
+*   **Next.js** (v16.2.4)
+*   **React** (v19.2.4)
+*   **MongoDB** (Database)
+*   **Better-Auth** (Authentication)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Major Dependencies:
+| Package | Purpose |
+| :--- | :--- |
+| `@better-auth/mongo-adapter` | Database adapter for authentication |
+| `@heroui/react` & `@heroui/styles` | Premium UI components |
+| `react-icons` & `@gravity-ui/icons` | Icon libraries |
+| `animate.css` | Smooth CSS animations |
+| `react-fast-marquee` | Dynamic scrolling announcements |
+| `react-hot-toast` | Beautiful notification alerts |
+| `react-loader-spinner` & `react-spinners` | Engaging loading states |
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/tiles-gallery.git](https://github.com/your-username/tiles-gallery.git)
+   
