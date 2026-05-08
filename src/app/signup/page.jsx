@@ -45,12 +45,14 @@ export default function SignUpPage() {
       password
     })
     // console.log({data, error});
+    
      if (error) {
       toast.error(error.message);
     }
 
     if (res) {
       toast.success("Registration Successful😊 Please Login with same info.");
+      authClient.signOut()
       router.push('/signin')
     
     }
