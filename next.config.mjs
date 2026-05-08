@@ -6,7 +6,11 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: 'i.ibb.co.com',
-      }
+      },
+       {
+   
+        hostname: "lh3.googleusercontent.com",
+      },
     ]
   }
 };

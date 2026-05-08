@@ -8,7 +8,7 @@ import { FaArrowLeft } from "react-icons/fa";
 const ViewDetailsPage = async ({ params }) => {
   const { id } = await params;
   const res = await fetch(
-    `https://tiles-gallery-server-xt5y.onrender.com/tiles`,
+    `https://tiles-gallery-server-xt5y.onrender.com/tiles`, { cache: 'no-cache'} ,
   );
   const tiles = await res.json();
 

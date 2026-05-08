@@ -44,7 +44,9 @@ const Navbar = () => {
             <NavLink href={"/"}>Home</NavLink>
             <NavLink href={"/all-tiles"}>All Tiles</NavLink>
             <NavLink href={"/profile"}>Profile</NavLink>
-            <NavLink href={"/signin"}>Sign in</NavLink>
+            { !user && <NavLink href={"/signin"}>Sign in</NavLink>}
+           {user && <NavLink href={''}><Button variant="danger" onClick={handleSignOut}>SignOut</Button></NavLink>}
+          
           </ul>
         </div>
         <Link href={"/"}>
@@ -63,8 +65,7 @@ const Navbar = () => {
           <Button className={"rounded hidden lg:flex"}>Sign in</Button>
         </Link>}
 
-    {
-      user &&  <div className="flex items-center gap-2">
+    {user &&  <div className=" items-center gap-2 hidden lg:flex">
       <h2 className="text-xs">{user?.name}</h2>
        <Link href={'/profile'}>
          <Avatar>

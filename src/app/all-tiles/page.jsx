@@ -2,7 +2,9 @@ import TileCard from "@/components/pages/TileCard";
 
 
 const AllTilesPage = async () => {
-  const res = await fetch(`https://tiles-gallery-server-xt5y.onrender.com/tiles`);
+  const res = await fetch(`https://tiles-gallery-server-xt5y.onrender.com/tiles`, {
+        cache: "no-cache"
+    });
   const tiles = await res.json();
 
   return (
