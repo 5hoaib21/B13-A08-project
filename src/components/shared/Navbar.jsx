@@ -61,7 +61,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">
           <NavLink href={"/"}>Home</NavLink>
           <NavLink href={"/all-tiles"}>All Tiles</NavLink>
-          <NavLink href={"/profile"}>Profile</NavLink>
+          <NavLink href={"/profile"}>My Profile</NavLink>
         </ul>
       </div>
     <div className="navbar-end">
