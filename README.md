@@ -5,11 +5,6 @@ A sophisticated and modern e-commerce platform dedicated to high-quality tiles. 
 ## 🚀 Live Demo
 Check out the live project here: [https://b13-a08-project.vercel.app](https://b13-a08-project.vercel.app)
 
----
-
-## 📸 Visuals
-![Animated Coding](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXZ6ZzRyeXZ6ZzRyeXZ6ZzRyeXZ6ZzRyeXZ6ZzRyeXZ6ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L1R1QHpHvAs8D_Jz9N/giphy.gif)
-*(Note: You can replace this with your own animated coding gif or project screenshot)*
 
 ---
 
