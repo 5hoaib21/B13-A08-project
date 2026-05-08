@@ -53,5 +53,5 @@ The main goal of **Tiles Gallery** is to bridge the gap between tile suppliers a
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/tiles-gallery.git](https://github.com/your-username/tiles-gallery.git)
+   https://github.com/5hoaib21/B13-A08-project.git
    
