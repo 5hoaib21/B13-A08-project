@@ -20,16 +20,13 @@ import { useState } from "react";
 export default function SignInPage() {
   const [isShowPassword, setIsShowPassword] = useState(false);
 
-
-
   // google sign in
 
   const handleGoogleSignIn = async () => {
-await authClient.signIn.social({
-  provider: 'google'
-})
-  }
-
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -41,7 +38,7 @@ await authClient.signIn.social({
     const { data: res, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: '/'
+      callbackURL: "/",
     });
     // console.log({data, error});
     if (error) {
@@ -57,7 +54,7 @@ await authClient.signIn.social({
     <Card className="border-0 shadow-2xl mx-auto w-125 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Login to Your Account</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex w-fit mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField
           isRequired
           name="email"
@@ -93,19 +90,19 @@ await authClient.signIn.social({
 
             return null;
           }}
-          className={'relative'}
+          className={"relative"}
         >
           <Label>Password</Label>
-          <Input 
-           placeholder="Enter your password" 
-          type={isShowPassword ? "text" : "password"}
+          <Input
+            placeholder="Enter your password"
+            type={isShowPassword ? "text" : "password"}
           />
-           <span
-              className="absolute right-3 top-8 cursor-pointer"
-              onClick={() => setIsShowPassword(!isShowPassword)}
-            >
-              {isShowPassword ? <FaEye size={20} /> : <FaEyeSlash size={20} />}
-            </span>
+         <span
+                    className="absolute right-7 top-8 cursor-pointer"
+                    onClick={() => setIsShowPassword(!isShowPassword)}
+                  >
+                    {isShowPassword ? <FaEye size={20} /> : <FaEyeSlash size={20} />}
+                  </span>
           <Description>
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
@@ -125,10 +122,10 @@ await authClient.signIn.social({
         </p>
         <div className="divider">OR</div>
         <div className="space-y-3">
-          <Button 
-          className="w-full" 
-          variant="tertiary"
-          onClick={handleGoogleSignIn}
+          <Button
+            className="w-full"
+            variant="tertiary"
+            onClick={handleGoogleSignIn}
           >
             <Icon icon="devicon:google" />
             Sign in with Google

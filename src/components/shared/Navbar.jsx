@@ -10,8 +10,12 @@ import Image from "next/image";
 
 const Navbar = () => {
 
-  const userData = authClient.useSession()
-  const user = userData.data?.user
+  
+  const {data: session, isPending} = authClient.useSession()
+  const user = session?.user
+
+
+
   const handleSignOut =async () => {
     await authClient.signOut()
   }

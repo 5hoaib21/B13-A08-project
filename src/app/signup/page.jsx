@@ -62,7 +62,7 @@ export default function SignUpPage() {
     <Card className="border-0 shadow-2xl mx-auto w-125 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Register Your Account</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex w-fit mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
           <Label>Name</Label>
           <Input placeholder="Enter your name" />
@@ -118,7 +118,7 @@ export default function SignUpPage() {
                 type={isShowPassword ? "text" : "password"}
                  />
                  <span
-                    className="absolute right-3 top-8 cursor-pointer"
+                    className="absolute right-7 top-8 cursor-pointer"
                     onClick={() => setIsShowPassword(!isShowPassword)}
                   >
                     {isShowPassword ? <FaEye size={20} /> : <FaEyeSlash size={20} />}
