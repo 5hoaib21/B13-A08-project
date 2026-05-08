@@ -1,12 +1,21 @@
 "use client";
-import { Button, Spinner } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import Link from "next/link";
 import React from "react";
 
-import Image from "next/image";
+
 import NavLink from "./NavLink";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 
 const Navbar = () => {
+
+  const userData = authClient.useSession()
+  const user = userData.data?.user
+  const handleSignOut =async () => {
+    await authClient.signOut()
+  }
+
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -49,10 +58,32 @@ const Navbar = () => {
           <NavLink href={"/profile"}>Profile</NavLink>
         </ul>
       </div>
-      <div className="navbar-end">
-        <Link href={"/signin"}>
+    <div className="navbar-end">
+       {!user && <Link href={"/signin"}>
           <Button className={"rounded hidden lg:flex"}>Sign in</Button>
-        </Link>
+        </Link>}
+
+    {
+      user &&  <div className="flex items-center gap-2">
+      <h2 className="text-xs">{user?.name}</h2>
+       <Link href={'/profile'}>
+         <Avatar>
+        <Avatar.Image 
+        alt={user?.name} 
+        src={user?.image}
+        referrerPolicy="no-referrer"
+        />
+        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+      </Avatar>
+       </Link>
+     <Button 
+     size="sm" 
+     variant="danger-soft"
+     onClick={handleSignOut}
+     >SignOut</Button>
+      </div>
+    }
+
       </div>
     </div>
   );
